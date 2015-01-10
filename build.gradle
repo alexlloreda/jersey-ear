@@ -1,5 +1,7 @@
 apply plugin: 'java'
+apply plugin: 'war'
 apply plugin: 'eclipse'
+apply plugin: 'jetty'
 
 sourceCompatibility = 1.7
 version = '1.0'
@@ -25,6 +27,8 @@ dependencies {
         [group: 'com.fasterxml.jackson.jaxrs', name: 'jackson-jaxrs-json-provider', version: "${jacksonVersion}"],
         [group: 'com.fasterxml.jackson.module', name: 'jackson-module-jsonSchema', version: "${jacksonVersion}"],
         [group: 'com.fasterxml.jackson.module', name: 'jackson-module-jaxb-annotations', version: "${jacksonVersion}"],
+        // Servlet support
+        [group: 'org.glassfish.jersey.containers', name: 'jersey-container-grizzly2-servlet', version: '2.+'],
     )
 }
 
